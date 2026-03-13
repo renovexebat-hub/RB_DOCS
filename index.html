@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<title>RENOVEX BAT | Gestion Documents</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, Arial;
+}
+
+body{
+
+background:url("background.jpg") no-repeat center center/cover;
+height:100vh;
+
+}
+
+.overlay{
+
+background:rgba(10,25,50,0.75);
+height:100%;
+padding:40px;
+
+}
+
+.container{
+
+max-width:1100px;
+margin:auto;
+text-align:center;
+color:white;
+
+}
+
+.logo{
+
+width:160px;
+margin-bottom:20px;
+
+}
+
+h1{
+
+font-size:40px;
+margin-bottom:10px;
+
+}
+
+.subtitle{
+
+opacity:0.8;
+margin-bottom:40px;
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+
+}
+
+.card{
+
+background:white;
+color:#222;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+transition:0.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
+
+}
+
+.icon{
+
+font-size:40px;
+margin-bottom:15px;
+
+}
+
+.btn{
+
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#1f3c6b;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-size:14px;
+
+}
+
+.btn:hover{
+
+background:#c49a5c;
+
+}
+
+.footer{
+
+margin-top:40px;
+font-size:14px;
+opacity:0.7;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="container">
+
+<img src="logo.png" class="logo">
+
+<h1>RENOVEX BAT</h1>
+
+<p class="subtitle">
+Bâtir avec précision, livrer avec passion
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">📂</div>
+<h3>Dossier Administratif</h3>
+<a href="docs/admin.pdf" class="btn">Ouvrir</a>
+</div>
+
+<div class="card">
+<div class="icon">📐</div>
+<h3>Plans Architecturaux</h3>
+<a href="docs/plans.pdf" class="btn">Voir les plans</a>
+</div>
+
+<div class="card">
+<div class="icon">💰</div>
+<h3>Devis & Factures</h3>
+<a href="docs/devis.pdf" class="btn">Consulter</a>
+</div>
+
+<div class="card">
+<div class="icon">🏗</div>
+<h3>Documents Techniques</h3>
+<a href="docs/technique.pdf" class="btn">Ouvrir</a>
+</div>
+
+</div>
+
+<div class="footer">
+
+RENOVEX BAT © 2026  
+Sidi Bel Abbès – Algérie
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
