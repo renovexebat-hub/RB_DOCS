@@ -3,131 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espace Documentaire - RENOVEX BAT</title>
+    <title>RENOVEX BAT - Documents</title>
     <style>
         :root {
-            /* Le bleu corporatif de votre entreprise */
-            --primary-blue: #0056b3; 
-            --bg-color: #f4f7f6;
+            --rb-blue: #1a428a; /* Bleu de votre logo */
+            --rb-gold: #c5a368; /* Doré de votre logo */
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--bg-color);
-            /* Décommentez la ligne ci-dessous et mettez le nom de votre image de fond */
-            /* background-image: url('votre-background.jpg'); */
+            background-image: url('COUVERTURE.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            color: #333;
         }
 
-        /* Overlay pour que le texte reste lisible si vous mettez une photo de fond */
         .overlay {
-            background-color: rgba(255, 255, 255, 0.85);
+            background-color: rgba(255, 255, 255, 0.92);
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .header {
-            display: flex;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            border-bottom: 4px solid var(--primary-blue);
+        header {
+            width: 100%;
+            background: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-bottom: 5px solid var(--rb-blue);
         }
 
         .logo {
-            height: 60px;
-            margin-right: 20px;
-            /* Remplacer par le nom de votre fichier logo avec les initiales RB et l'emblème de maçonnerie */
+            max-width: 180px;
+            height: auto;
         }
 
-        .header h1 {
-            color: #333;
-            font-size: 24px;
-            margin: 0;
+        .content {
+            width: 90%;
+            max-width: 800px;
+            margin: 40px 0;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            color: var(--primary-blue);
-            border-bottom: 2px solid #ddd;
+        h2 {
+            color: var(--rb-blue);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--rb-gold);
             padding-bottom: 10px;
-            margin-bottom: 20px;
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
+        .file-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        .card {
+        .file-item {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 18px 25px;
+            border-radius: 12px;
             text-decoration: none;
-            color: #333;
+            color: var(--rb-blue);
+            font-weight: 600;
             display: flex;
             align-items: center;
-            transition: transform 0.2s, border 0.2s;
-            border: 2px solid transparent;
+            justify-content: space-between;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--rb-gold);
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-blue);
+        .file-item:hover {
+            transform: translateX(10px);
+            background: var(--rb-blue);
+            color: white;
+            border-left-color: var(--rb-blue);
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
         .icon {
-            font-size: 40px;
-            margin-right: 15px;
+            font-size: 24px;
         }
 
-        .folder-icon { color: var(--primary-blue); }
-        .file-icon { color: #e74c3c; } /* Rouge pour les PDF par exemple */
-
-        .item-name {
-            font-weight: 600;
-            font-size: 16px;
-            word-break: break-word;
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <div class="overlay">
-        <div class="header">
-            <img src="logo-rb.png" alt="Logo RENOVEX BAT" class="logo" onerror="this.style.display='none'">
-            <h1>Espace Documentaire RENOVEX BAT</h1>
-        </div>
+        <header>
+            <img src="logo.png" alt="RENOVEX BAT" class="logo">
+        </header>
 
-      
+        <div class="content">
+            <h2>Documents Disponibles</h2>
+            
+            <div class="file-list">
+                <a href="docs/PLAQUE BUREAU.pdf" target="_blank" class="file-item">
+                    <div class="file-info">
+                        <span class="icon">📄</span>
+                        <span>PLAQUE DU BUREAU</span>
+                    </div>
+                    <span>Ouvrir</span>
+                </a>
 
-            <h2 class="section-title">Documents Partagés</h2>
-            <div class="grid">
-                <a href="docs/PLAQUE BUREAU.pdf" target="_blank" class="card">
-                    <span class="icon file-icon">📄</span>
-                    <span class="item-name">Plaque Bureaupdf</span>
+                <a href="docs/NOS SERVICES.png" target="_blank" class="file-item">
+                    <div class="file-info">
+                        <span class="icon">📋</span>
+                        <span>NOS SERVICES</span>
+                    </div>
+                    <span>Ouvrir</span>
                 </a>
-                <a href="docs/LOGO RB.png" target="_blank" class="card">
-                    <span class="icon file-icon">📄</span>
-                    <span class="item-name">LOGO RB.png</span>
+
+                  <a href="docs/ARCHILAB.png" target="_blank" class="file-item">
+                    <div class="file-info">
+                        <span class="icon">📋</span>
+                        <span>ARCHILAB LOGO</span>
+                    </div>
+                    <span>Ouvrir</span>
                 </a>
-                <a href="docs/ARCHILAB.png" target="_blank" class="card">
-                    <span class="icon file-icon">📄</span>
-                    <span class="item-name">LOGO ARCHILAB.png</span>
+                <a href="docs/LOGO RB.png" target="_blank" class="file-item">
+                    <div class="file-info">
+                        <span class="icon">🔬</span>
+                        <span>LOGO RB</span>
+                    </div>
+                    <span>Ouvrir</span>
                 </a>
             </div>
         </div>
+
+        <footer>
+            © 2026 RENOVEX BAT - Sidi Bel Abbés 1 Algérie
+        </footer>
     </div>
 </body>
 </html>
